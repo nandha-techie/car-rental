@@ -1,0 +1,96 @@
+@use '../global/' as *;
+
+.contact-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    background-image: url('../../images/banners/bg-contact.png');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10rem 2rem;
+
+    @media(max-width: 950px){
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    &__text{
+        display: flex;
+        flex-direction: column;
+        max-width: 42rem;
+        gap: 1rem;
+
+        @media(max-width: 950px){
+            margin: 0 auto 2rem;
+        }
+
+        h2{
+            font-size: $h2-size;
+        }
+        p{
+            color: $text-gray;
+            font-size: $p-size;
+            margin-bottom: 1.5rem;
+        }
+        a{
+            text-decoration: none;
+            font-size: $p-size;
+            color: $text-black;
+            transition: all 0.3s;
+            margin-bottom: 1rem;
+            &:hover{
+                color: $orange;
+            }
+        }
+
+    }
+    &__form{
+        form{
+            display: flex;
+            flex-direction: column;
+
+            label{
+                font-size: $p-size;
+                margin-bottom: 1rem;
+                color: $text-black;
+                font-weight: 600;
+                span{
+                    color: $orange;
+                }
+                @media(max-width: 950px){
+                    align-self: start;
+                }
+            }
+            input, textarea{
+                padding: 2rem 2rem;
+                border: none;
+                outline: none;
+                background: #f2f2f2;
+                margin-bottom: 2rem;
+                font-size: 1.8rem;
+            }
+            textarea{
+                height: 17rem;
+            }
+            button{
+                padding: 2rem 2rem;
+                border: none;
+                border-radius: 3px;
+                outline: none;
+                background-color: $orange;
+                color: #fff;
+                font-size: $p-size;
+                font-weight: 500;
+                cursor: pointer;
+                box-shadow: 0 10px 15px 0 rgb(255 83 48 / 35%);
+                transition: all 0.3s;
+
+                &:hover{
+                    box-shadow: 0 10px 15px 0 rgb(255 83 48 / 60%);
+                }
+            }
+        }
+    }
+
+}

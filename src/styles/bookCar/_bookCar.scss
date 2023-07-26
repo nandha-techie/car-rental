@@ -1,0 +1,123 @@
+@use '../global' as *;
+
+.book-section{
+    position: relative;
+    background: linear-gradient(to bottom, $bg-gray 20%, $bg-white 80%);
+} 
+
+.book-content{
+    margin: 0 auto;
+    margin-bottom: 10rem;
+
+    h2{
+        color: $text-black;
+        font-size: $h3-size;
+        font-weight: 700;
+        margin-bottom: 2.7rem;
+    }
+    &__box{
+        position: relative;
+        z-index: 4;
+        box-shadow: 0 10px 20px 0 rgb(0 0 0 / 10%);
+        padding: 3rem 5rem;
+        background-color: white;
+        background-image: url("../../../src/images/book-car/book-bg.png");
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+
+        @media(max-width: 400px){
+            padding: 4rem 2.5rem 5rem 2.5rem;
+        }
+        
+        .box-form{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+
+            @media(max-width: 1000px){
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @media(max-width: 630px){
+                grid-template-columns: 1fr;
+            }
+
+            b{
+                color: $orange;
+            }
+
+            .box-form__car-type{
+                display: flex;
+                flex-direction: column;
+                
+                label{
+                    margin-bottom: 1.2rem;
+                    font-size: $p-size;
+                    font-weight: 600;
+    
+                    i{
+                        color: $orange;
+                    }
+                }
+                select{
+                    outline: none;
+                    border: 1px solid #ccd7e6;
+                    border-radius: 3px;
+                    font-size: 1.6rem;
+                    padding: 1rem 2rem;
+                    font-family: $titles-font;
+                    font-weight: 400;
+                    color: #ababab;
+                }
+            }
+    
+            &__car-time{
+                display: flex;
+                flex-direction: column;
+    
+                input{
+                    outline: none;
+                    border: 1px solid #ccd7e6;
+                    border-radius: 3px;
+                    font-size: 1.6rem;
+                    padding: 1rem 2rem;
+                    font-family: $titles-font;
+                    font-weight: 400;
+                    color: #ababab;
+                }
+    
+                label {
+                    font-size: $p-size;
+                    font-weight: 600;
+                    margin-bottom: 1.2rem;
+          
+                    i {
+                      color: $orange;
+                    }
+                }
+                
+            }
+
+            button{
+                align-self: end;
+                font-family: $titles-font;
+                font-weight: 700;
+                background-color: $orange;
+                color: white;
+                box-shadow: 0 10px 15px 0 rgb(255 83 48 / 35%);
+                border: none;
+                padding: 1.1rem 2rem;
+                font-size: 1.8rem;
+                cursor: pointer;
+
+                &:hover{
+                    box-shadow: 0 10px 15px 0 rgb(255 83 48 / 50%);
+                }
+            }
+        }
+    }
+}

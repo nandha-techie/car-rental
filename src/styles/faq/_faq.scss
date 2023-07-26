@@ -1,0 +1,89 @@
+@use '../global' as *;
+
+
+.faq-section{
+    background-image: url(/images/faq/car.png);
+    background-position: 0 70%; 
+    background-repeat: no-repeat;
+    padding:  10rem 0;
+    background-size: auto;
+}
+.faq-content{
+    display: flex;
+    flex-direction: column;
+
+    &__title{
+        display: flex;
+        flex-direction: column;
+        line-height: 1.5;
+        max-width: 80rem;
+        margin: 0 auto;
+        text-align: center;
+
+        h5{
+            font-size: $h4-size;
+        }
+
+        h2{
+            font-size: $h2-size;
+            margin-bottom: 2rem;
+        }
+
+        p{
+            color: $text-gray;
+            font-size: $p-size;
+        }
+    }
+}
+.all-questions{
+    display: flex;
+    flex-direction: column;
+    margin-top: 7rem;
+}
+.faq-box{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0 10px 15px 0 rgb(0 0 0 / 10%);
+    color: $text-black;
+    width: 80rem;
+    margin: 0 auto;
+    cursor: pointer;
+
+    @media (max-width: 850px){      
+        width: 100%;
+    }
+
+    &__question{
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        padding: 1.8rem 4.5rem;
+        justify-content: space-between;
+
+        p{
+            font-size: 1.8rem;
+            font-weight: 500;
+        }
+        i{
+            font-size: 2rem;
+        }
+    }
+    &__answer{
+        color: $text-gray;
+        padding: 0rem 4.5rem;
+        max-height: 0rem;
+        font-size: $p-size;
+        overflow: hidden;
+        transition: all 0.4s;
+    }
+}
+
+.active-question{
+    color: #fff;
+    background-color: $orange;
+}
+.active-answer{
+    max-height: 20rem;
+    padding: 2.5rem 4.5rem;
+}

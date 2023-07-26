@@ -1,0 +1,62 @@
+@use "./colors.scss" as *;
+@use "./typhography.scss" as *;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: $titles-font;
+    background-color: $bg-white;
+    position: relative;
+}
+.container{
+    max-width: 133rem;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+}
+
+// scroll bar ------
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #ff4d30 #ffffff;
+  }
+  
+  /* Chrome, Edge and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+  *::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #ffffff;
+  }
+  
+  *::-webkit-scrollbar-track:hover {
+    background-color: #ffffff;
+  }
+  
+  *::-webkit-scrollbar-track:active {
+    background-color: #ffffff;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: #ff4d30;
+  }
+  
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: #ff4d30;
+  }
+  
+  *::-webkit-scrollbar-thumb:active {
+    background-color: #ff2525;
+  }

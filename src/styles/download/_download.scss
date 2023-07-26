@@ -1,0 +1,46 @@
+@use '../global' as *;
+
+.download-section{
+    background-color: $bg-gray;
+    background-image: url('../../images/banners/bg02.png');
+    padding: 10rem 0;
+    background-position: top;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+
+    @media(max-width: 700px){
+        background-image: none;
+    }
+} 
+.download-text{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 60rem;
+
+    @media(max-width: 700px){
+        margin: 0;
+        text-align: center;
+    }    
+
+    h2{
+        font-size: $h2-size;
+    }
+    p{
+        font-size: $p-size;
+        color: $text-gray;
+    }
+
+    &__btns{
+        display: flex;
+        gap: 3rem;
+        margin-top: 2rem;
+
+        img{
+            cursor: pointer;
+            width: 40%;
+        }
+    }
+}

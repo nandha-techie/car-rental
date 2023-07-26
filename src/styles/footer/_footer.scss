@@ -1,0 +1,138 @@
+@use '../global/' as *;
+
+.footer-section{
+    padding: 10rem 0;
+
+}
+.footer-content{
+    display: grid;
+    grid-template-columns: 27fr 21fr 21fr 21fr;
+    color: $text-black;
+    gap: 8rem;
+    justify-content: center;
+    text-align: left;
+
+    @media(max-width: 1100px){
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media(max-width: 678px){
+        grid-template-columns: 1fr;
+    }
+
+    &__1{
+        list-style: none;
+
+        li{
+            margin-bottom: 1.5rem;
+
+            a{
+                text-decoration: none;
+                font-size: $p-size;
+                color: $text-black;
+                transition: all 0.3s;
+
+                &:hover{
+                    color: $orange;
+                }
+            }
+        }
+
+        li:first-child{
+            font-size: $h3-size;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+
+            span{
+                font-weight: 400;
+            }
+        }
+        li:nth-child(2){
+            color: $text-gray;
+            font-size: $p-size;
+            line-height: 1.7;
+            margin-bottom: 3rem;
+        }
+
+        li:nth-child(3), li:nth-child(4){   
+            font-weight: 500;
+            font-family: $text-font;
+
+            a{
+                color: $text-black;
+                transition: all 0.3s;
+
+                &:hover{
+                    color: $orange;
+                }
+            }
+        }
+
+        @media(max-width: 678px){
+            text-align: center;
+        }
+
+    }
+
+    &__2{
+        list-style: none;
+
+        a{
+            text-decoration: none;
+            color: $text-black;
+            transition: all 0.2s;
+
+            &:hover{
+                color: $orange;
+            }
+        }
+
+        li{
+            font-size: $p-size;
+            margin-bottom: 1rem;
+        }
+
+        li:first-child{
+            font-size: $h3-size;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        &__subscribe{
+            background-color: #ececec;
+            padding: 1.2rem 5rem;
+            border-radius: 3px;
+            border: none;
+            outline: none;
+            line-height: 26px;
+
+            @media(max-width: 678px){
+                width: 100%;
+            }
+        }
+
+        &__submit-email{
+            background-color: $orange;
+            padding: 1.2rem 5rem;
+            border: none;
+            outline: none;
+            width: 100%;
+            cursor: pointer;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            border-radius: 3px;
+            transition: all 0.2s;
+
+            &:hover{
+                box-shadow: 0 10px 15px 0 rgb(255 83 48 / 25%);
+            }
+        }
+
+        @media(max-width: 678px){
+            text-align: center;
+        }
+        
+
+    }
+}

@@ -1,0 +1,38 @@
+@use '../global' as *;
+
+.hero-pages{
+    width: 100%;
+    height: 45rem;
+    background-image: url("../../../src/images/hero/heroes-bg.png");
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &__overlay{ 
+        position: absolute;
+        background-color: hsla(0,0%,100%,.92);
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__text{
+        display: flex;
+        flex-direction: column;
+        height: 45rem;
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        justify-content: center;
+
+        h2{
+            font-size: $h2-size;
+        }
+        p{
+            font-size: 1.8rem;
+            font-weight: 500;
+        }
+    }
+}

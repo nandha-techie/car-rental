@@ -1,0 +1,44 @@
+@use '../global/' as *;
+
+.team-container{
+    padding: 10rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 110rem;
+    margin: 0 auto;
+    gap: 3rem;
+
+    @media(max-width: 1150px){
+        grid-template-columns: 1fr 1fr;
+        width: fit-content;
+    }
+
+    @media(max-width: 800px){
+        grid-template-columns: 1fr;
+    }
+
+    &__box{
+        background-color: #fff;
+        box-shadow: 0 20px 10px 0 rgb(0 0 0 / 8%);
+        width: 33rem;
+        text-align: center;
+
+        &__img{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+
+        &__desc{
+            padding: 3rem;
+            h4{
+                font-size: $h4-size;
+            }
+            p{
+                font-size: $p-size;
+                color: $text-gray;
+            }
+        }
+    }
+}

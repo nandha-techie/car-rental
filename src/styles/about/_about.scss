@@ -1,0 +1,88 @@
+@use '../global' as *;
+
+.about-section{
+    position: relative;
+}
+.about-main{
+    display: flex;
+    gap: 5rem;
+    margin: 10rem auto;
+    max-width: 90rem;
+
+    @media(max-width: 960px){
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 49rem;
+        text-align: center;
+    }
+
+    &__img{
+        width: 43rem;
+        height: 43rem;
+    }
+    &__text{
+        display: flex;
+        flex-direction: column;
+
+        h3{
+            font-size: $h3-size;
+            margin-bottom: 1rem;
+        }
+        h2{
+            font-size: $h2-size;
+            line-height: 1.2;
+        }
+        p{
+            color: $text-gray;
+            font-size: $p-size;
+            margin-top: 2rem;
+            margin-bottom: 4rem;
+        }
+        &__icons{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4rem;
+
+            @media(max-width: 520px){
+                grid-template-columns: 1fr;
+                margin: 0 auto;
+                gap: 0;
+                
+                p{
+                    margin-top: 0;
+                }
+             }
+
+            &__box{ 
+                display: flex;
+                flex-direction: column;
+
+                @media(max-width: 520px){
+                   align-items: center;                    
+                }
+
+                .last-fk{
+                    width: 5rem;
+                }
+
+                img{
+                    width: 7rem;
+                }
+                span{
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+
+                    @media(max-width: 520px){
+                        flex-direction: column;
+                        text-align: center;
+                    }
+
+                    h4{
+                        font-size: 4rem;
+                    }
+                }
+            }
+        }
+    }
+}
