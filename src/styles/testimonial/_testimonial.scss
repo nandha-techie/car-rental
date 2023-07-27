@@ -95,4 +95,8 @@
     bottom: 40px;
     color: $orange;
     font-size: 7rem;
+
+    @media(max-width: 450px){
+        display: none;
+    }
 }
