@@ -12,15 +12,15 @@ import './App.scss';
 function App() {
   return (
     <>
-    <BrowserRouter basename={'/car-rental/'}>
+    <BrowserRouter basename={'/car-rental/'} >
       <Navbar />
       <Routes>
         <Route index path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="vehicle" element={<Vehicle />} />
-        <Route path="testimonial" element={<Testimonial />} />
-        <Route path="team" element={<Team />} />
-        <Route path="contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/vehicle" element={<Vehicle />} />
+        <Route path="/testimonial" element={<Testimonial />} />
+        <Route path="/team" element={<Team />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       </BrowserRouter>
     </>
