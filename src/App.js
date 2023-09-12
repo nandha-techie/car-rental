@@ -15,7 +15,7 @@ function App() {
     <HashRouter >
       <Navbar />
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route index path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/vehicle" element={<Vehicle />} />
         <Route path="/testimonial" element={<Testimonial />} />
