@@ -12,7 +12,7 @@ import './App.scss';
 function App() {
   return (
     <>
-    <BrowserRouter basename={'/car-rental'}>
+    <BrowserRouter basename={'/car-rental/'}>
       <Navbar />
       <Routes>
         <Route index path="/" element={<Home />} />
