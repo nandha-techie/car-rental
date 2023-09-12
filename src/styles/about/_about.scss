@@ -19,6 +19,10 @@
     &__img{
         width: 43rem;
         height: 43rem;
+        @media(max-width: 520px){
+            width: 100%;
+            height: auto;
+        }
     }
     &__text{
         display: flex;
